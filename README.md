@@ -71,3 +71,28 @@ python app.py
 ➠ Output
 Open your browser and navigate to:
 http://127.0.0.1:5000
+
+---
+
+## 📸 Application Screenshots
+
+### 🏠 Home Page
+Clean and user-friendly landing page introducing the Heart-Link platform, allowing users to register or log in easily.
+
+![Home Page](screenshots/Home.png)
+
+---
+
+### 🧪 Diagnostic Dashboard
+Users can either upload a medical report for OCR-based analysis or manually enter clinical parameters to get an AI-powered diagnosis.
+
+![Diagnostic Dashboard](screenshots/Diagnostic_dashboard.png)
+
+---
+
+### 📊 User Health Dashboard
+Displays past predictions with risk categorization, probability scores, and options to download detailed PDF reports.
+
+![User Dashboard](screenshots/Dashboard.png)
+
+---
