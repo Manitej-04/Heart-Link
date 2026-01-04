@@ -25,7 +25,7 @@ Heart-Link is a full-stack web application designed to assist in the **early det
 - **Input Features:**  
   Age, Blood Pressure, Cholesterol, Maximum Heart Rate, Oldpeak, Chest Pain Type, ECG results, Exercise Angina, and related clinical indicators  
 - **Performance Metrics:**  
-  - Accuracy > **85%**  
+  - Accuracy = **90%**  
   - Optimized **ROC-AUC**, Precision, Recall, and F1-score  
 - Probability-based risk stratification aligned with clinical interpretation
 
@@ -96,4 +96,5 @@ Displays past predictions with risk categorization, probability scores, and opti
 ![User Dashboard](screenshots/Dashboard.png)
 
 ---
+
 
