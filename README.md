@@ -1,148 +1,73 @@
-❤️ Heart-Link
-AI-Powered Heart Disease Risk Prediction System
+# ❤️ Heart-Link  
+### AI-Powered Heart Disease Risk Prediction System
 
-Heart-Link is a full-stack web application designed to assist in the early detection of heart disease by leveraging machine learning and OCR-based medical report analysis. The system enables both manual clinical data entry and automated extraction from lab reports, providing accurate risk predictions and downloadable medical summaries.
+Heart-Link is a full-stack web application designed to assist in the **early detection of heart disease** using **Machine Learning** and **OCR-based medical report analysis**. The platform enables both **manual clinical data entry** and **automated extraction from lab reports**, delivering accurate risk predictions along with downloadable medical reports.
 
-⚠️ This project is intended for academic and demonstration purposes only and should not be used as a substitute for professional medical diagnosis.
+> ⚠️ **Disclaimer:** This project is intended for academic and demonstration purposes only and must not be used as a substitute for professional medical diagnosis.
 
-🚀 Key Features
+## 🚀 Key Features
 
-Secure Patient and Admin Authentication
+- Secure **Patient and Admin Authentication**
+- Manual clinical parameter entry for heart disease prediction
+- **OCR-based medical report upload and analysis**
+- AI-driven **risk categorization**:
+  - 🟢 Low Risk  
+  - 🟡 Moderate Risk  
+  - 🔴 High Risk
+- **Downloadable PDF diagnostic reports**
+- Prediction history tracking for patients
+- **Admin dashboard** with system-wide analytics
 
-Manual clinical parameter input for heart disease prediction
+## 🧠 Machine Learning Overview
 
-OCR-based medical report upload and analysis
+- **Model:** Calibrated Random Forest Classifier  
+- **Training Dataset:** Heart Disease Dataset  
+- **Input Features:**  
+  Age, Blood Pressure, Cholesterol, Maximum Heart Rate, Oldpeak, Chest Pain Type, ECG results, Exercise Angina, and related clinical indicators  
+- **Performance Metrics:**  
+  - Accuracy > **85%**  
+  - Optimized **ROC-AUC**, Precision, Recall, and F1-score  
+- Probability-based risk stratification aligned with clinical interpretation
 
-AI-driven risk classification:
+## 🛠 Technology Stack
 
-Low Risk
+### Backend
+- Flask (Python Web Framework)
+- SQLite (Relational Database)
 
-Moderate Risk
+### Machine Learning
+- scikit-learn
+- NumPy
+- Pandas
+- Joblib (Model Serialization)
 
-High Risk
+### OCR & Document Processing
+- Tesseract OCR
+- OpenCV
+- pdf2image
+- ReportLab (PDF Generation)
 
-Downloadable PDF diagnostic reports
+### Frontend
+- HTML5
+- CSS3
 
-Admin dashboard with user and prediction analytics
+## ⚙️ Installation & Setup
 
-Prediction history tracking for patients
-
-🧠 Machine Learning Overview
-
-Model: Calibrated Random Forest Classifier
-
-Training Dataset: Heart Disease Dataset
-
-Input Features:
-Age, Blood Pressure, Cholesterol, Maximum Heart Rate, Oldpeak, Chest Pain Type, ECG results, and related clinical indicators
-
-Performance Metrics:
-
-Accuracy > 85%
-
-Optimized ROC-AUC, Precision, Recall, and F1-score
-
-Probability-based risk stratification aligned with clinical interpretation
-
-🛠 Technology Stack
-Backend
-
-Flask (Python Web Framework)
-
-SQLite (Relational Database)
-
-Machine Learning
-
-scikit-learn
-
-NumPy, Pandas
-
-Joblib (Model Serialization)
-
-OCR & Document Processing
-
-Tesseract OCR
-
-OpenCV
-
-pdf2image
-
-ReportLab (PDF Generation)
-
-Frontend
-
-HTML5
-
-CSS3
-
-⚙️ Installation & Setup
 1️⃣ Clone the Repository
 git clone https://github.com/Manitej-04/Heart-Link.git
 cd Heart-Link
 
-2️⃣ Install Dependencies
+2️⃣ Create Virtual Environment (Optional but Recommended)
+python -m venv .venv
+source .venv/bin/activate   # Linux/Mac
+.venv\Scripts\activate      # Windows
+
+3️⃣ Install Dependencies
 pip install -r requirements.txt
 
-3️⃣ Run the Application
+4️⃣ Run the Application
 python app.py
 
-
+➠ Output
 Open your browser and navigate to:
-
 http://127.0.0.1:5000
-
-📄 OCR Testing
-
-The application supports uploading PDF or image-based medical reports.
-OCR extracts clinical parameters automatically and feeds them into the prediction pipeline.
-
-Sample reports can be used to demonstrate:
-
-Low risk prediction
-
-Moderate risk prediction
-
-High risk prediction
-
-🔐 User Roles
-Patient
-
-Register & login
-
-Upload medical reports or enter data manually
-
-View risk prediction results
-
-Download diagnostic PDF reports
-
-Access prediction history
-
-Admin
-
-View all registered users
-
-Monitor prediction records
-
-Analyze system-wide risk trends
-
-📌 Project Structure (High Level)
-Heart-Link/
-├── app.py
-├── models/
-├── templates/
-├── static/
-├── ocr_utils.py
-├── report_utils.py
-├── database.py
-├── requirements.txt
-└── README.md
-
-⚠️ Disclaimer
-
-This application is developed strictly for educational and research purposes.
-It is not approved for clinical use and should not replace professional healthcare advice.
-
-👨‍💻 Author
-
-Manitej
-Engineering Student | AI & Data Analytics Enthusiast
