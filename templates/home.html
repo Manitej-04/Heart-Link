@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="text-center py-20">
+    <h1 class="text-5xl font-extrabold text-slate-800 mb-6">Your Heart Health, <span class="text-blue-600">Demystified</span>.</h1>
+    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">HeartLine uses advanced AI to analyze medical reports and predict heart disease risk instantly. Upload your report or enter data manually.</p>
+    
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('dashboard') }}" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transition shadow-lg">Go to Dashboard</a>
+    {% else %}
+        <div class="space-x-4">
+            <a href="{{ url_for('register') }}" class="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-700 transition shadow-lg">Get Started</a>
+            <a href="{{ url_for('login') }}" class="bg-white text-blue-600 border border-blue-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-blue-50 transition">Login</a>
+        </div>
+    {% endif %}
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 text-left">
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4 text-2xl"><i class="fa-solid fa-file-medical"></i></div>
+            <h3 class="text-xl font-bold mb-2">OCR Analysis</h3>
+            <p class="text-gray-500">Simply upload a photo of your lab report. Our AI extracts the data automatically.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4 text-2xl"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="text-xl font-bold mb-2">90% Accuracy</h3>
+            <p class="text-gray-500">Powered by Random Forest algorithms trained on thousands of clinical datasets.</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow hover:shadow-md transition">
+            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-4 text-2xl"><i class="fa-solid fa-file-pdf"></i></div>
+            <h3 class="text-xl font-bold mb-2">Instant Reports</h3>
+            <p class="text-gray-500">Download a professional PDF assessment to share with your doctor immediately.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

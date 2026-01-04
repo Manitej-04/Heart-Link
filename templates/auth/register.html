@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg mt-10">
+    <h2 class="text-3xl font-bold mb-8 text-center text-slate-800">Create Account</h2>
+    
+    <form method="POST" class="space-y-6">
+        <div>
+            <label class="block text-gray-700 font-medium mb-2">Full Name</label>
+            <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+        </div>
+        
+        <div>
+            <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+            <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+        </div>
+        
+        <div>
+            <label class="block text-gray-700 font-medium mb-2">Password</label>
+            <input type="password" name="password" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg">Register</button>
+    </form>
+    
+    <p class="mt-6 text-center text-gray-500">Already have an account? <a href="{{ url_for('login') }}" class="text-blue-600 hover:underline font-bold">Login</a></p>
+</div>
+{% endblock %}

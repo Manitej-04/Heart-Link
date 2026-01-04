@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="max-w-md mx-auto bg-white rounded-xl shadow-lg mt-10 overflow-hidden">
+    
+    <div class="flex border-b text-center font-bold text-gray-500 bg-gray-50">
+        <div id="tab-patient" onclick="switchTab('patient')" class="w-1/2 py-4 cursor-pointer hover:bg-white text-blue-600 border-b-2 border-blue-600 transition">
+            <i class="fa-solid fa-user-injured mr-2"></i> Patient
+        </div>
+        <div id="tab-admin" onclick="switchTab('admin')" class="w-1/2 py-4 cursor-pointer hover:bg-white hover:text-gray-800 transition">
+            <i class="fa-solid fa-user-shield mr-2"></i> Admin
+        </div>
+    </div>
+
+    <div class="p-8">
+        <h2 id="login-title" class="text-2xl font-bold mb-2 text-center text-slate-800">Patient Login</h2>
+        <p id="login-desc" class="text-sm text-gray-500 text-center mb-8">Access your personal health records.</p>
+        
+        <form method="POST" class="space-y-6">
+            <div>
+                <label class="block text-gray-700 font-medium mb-2">Email Address</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        <i class="fa-solid fa-envelope"></i>
+                    </span>
+                    <input type="email" name="email" placeholder="name@example.com" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+                </div>
+            </div>
+            
+            <div>
+                <label class="block text-gray-700 font-medium mb-2">Password</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                        <i class="fa-solid fa-lock"></i>
+                    </span>
+                    <input type="password" name="password" placeholder="••••••••" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+                </div>
+            </div>
+
+            <button type="submit" id="login-btn" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg flex justify-center items-center">
+                <span>Login as Patient</span> <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+        </form>
+        
+        <div id="register-link" class="mt-6 text-center text-gray-500">
+            Don't have an account? <a href="{{ url_for('register') }}" class="text-blue-600 hover:underline font-bold">Register</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function switchTab(role) {
+        const title = document.getElementById('login-title');
+        const desc = document.getElementById('login-desc');
+        const btn = document.getElementById('login-btn');
+        const tabPatient = document.getElementById('tab-patient');
+        const tabAdmin = document.getElementById('tab-admin');
+        const regLink = document.getElementById('register-link');
+
+        if(role === 'admin') {
+            // UI Updates for Admin
+            title.innerText = 'Admin Portal';
+            desc.innerText = 'Secure access for hospital staff only.';
+            
+            // Button Style (Dark Slate for Admin)
+            btn.className = "w-full bg-slate-800 text-white py-3 rounded-lg font-bold hover:bg-slate-900 transition shadow-lg flex justify-center items-center";
+            btn.innerHTML = '<span>Login to Console</span> <i class="fa-solid fa-lock ml-2"></i>';
+            
+            // Tab Active States
+            tabAdmin.classList.add('text-slate-800', 'border-b-2', 'border-slate-800', 'bg-white');
+            tabAdmin.classList.remove('hover:bg-white');
+            
+            tabPatient.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+            tabPatient.classList.add('text-gray-400', 'hover:bg-gray-50');
+            
+            // Hide Register Link for Admin (Admins usually don't self-register)
+            regLink.classList.add('hidden');
+        } else {
+            // UI Updates for Patient
+            title.innerText = 'Patient Login';
+            desc.innerText = 'Access your personal health records.';
+            
+            // Button Style (Blue for Patient)
+            btn.className = "w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg flex justify-center items-center";
+            btn.innerHTML = '<span>Login as Patient</span> <i class="fa-solid fa-arrow-right ml-2"></i>';
+            
+            // Tab Active States
+            tabPatient.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            tabPatient.classList.remove('text-gray-400', 'hover:bg-gray-50');
+            
+            tabAdmin.classList.remove('text-slate-800', 'border-b-2', 'border-slate-800', 'bg-white');
+            tabAdmin.classList.add('hover:bg-white');
+            
+            // Show Register Link
+            regLink.classList.remove('hidden');
+        }
+    }
+</script>
+{% endblock %}

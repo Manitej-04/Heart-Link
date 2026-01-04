@@ -1,0 +1,184 @@
+/* ---------- Reset/Global ---------- */
+:root{
+  --primary: #0b5ed7;
+  --accent: linear-gradient(90deg,#06b6d4,#0b5ed7);
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --bg: #f4f8fb;
+}
+*{box-sizing:border-box}
+body{font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0f172a; margin:0;}
+
+/* ---------- Shell ---------- */
+.app-shell{min-height:100vh}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  width:260px;
+  background: #05132a;
+  color: #dbeafe;
+  padding:18px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.sidebar.collapsed { width:80px; }
+.brand{display:flex;align-items:center;gap:10px;padding:6px 8px}
+.brand-logo{width:36px;height:36px;border-radius:8px;object-fit:cover}
+.brand-text{font-weight:700;color:var(--bg);}
+.nav-link{
+  color:#cfe9ff;
+  padding:10px 12px;
+  border-radius:8px;
+  display:flex;align-items:center;
+  gap:10px;
+}
+.nav-link:hover{background:rgba(255,255,255,0.03);text-decoration:none}
+.sidebar-footer{margin-top:auto;color:#9fb6d8;font-size:13px;padding:8px 6px}
+
+/* ---------- Topbar ---------- */
+.topbar{
+  height:64px;
+  background:transparent;
+  border-bottom:1px solid rgba(15,23,42,0.04);
+  display:flex;align-items:center;justify-content:space-between;
+}
+
+/* ---------- Content & Cards ---------- */
+.content{min-height:100vh}
+.card{background:var(--card-bg);border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 6px 18px rgba(8,24,48,0.04)}
+.chart-card{padding:18px}
+
+/* ---------- Form Controls ---------- */
+.btn-primary{
+  background: var(--primary) !important;
+  border: none;
+  box-shadow: 0 6px 18px rgba(11,94,215,0.14);
+}
+.btn-ghost{background:transparent;border:1px solid rgba(11,94,215,0.12);color:var(--primary);}
+
+/* ---------- Summary stat boxes ---------- */
+.stat-box{flex:1;min-width:160px;padding:14px;border-radius:10px;background:#fbfdff;border:1px solid rgba(11,94,215,0.03);text-align:center}
+.stat-box h3{margin:0;font-size:22px}
+.stat-box p{margin:4px 0 0;color:var(--muted)}
+.stat-box.low{border-left:6px solid #10b981}
+.stat-box.moderate{border-left:6px solid #f59e0b}
+.stat-box.high{border-left:6px solid #ef4444}
+
+/* ---------- Table ---------- */
+table{width:100%;border-collapse:collapse}
+thead th{background:var(--primary);color:#fff;padding:12px;font-weight:700;position:sticky;top:0}
+tbody td{padding:12px;border-bottom:1px solid rgba(2,6,23,0.04);text-align:center}
+tbody tr:hover{background:#fbfdff}
+.high-row{background:#fff1f2}
+.low-risk{background:#d1fae5;color:#065f46;padding:6px 10px;border-radius:12px}
+.moderate-risk{background:#fef3c7;color:#92400e;padding:6px 10px;border-radius:12px}
+.high-risk{background:#fee2e2;color:#991b1b;padding:6px 10px;border-radius:12px}
+
+/* ---------- OCR drop area ---------- */
+.ocr-drop{
+  border:2px dashed rgba(11,94,215,0.12);
+  border-radius:10px;padding:18px;text-align:center;background:linear-gradient(180deg, rgba(11,94,215,0.02), transparent)
+}
+.ocr-drop input[type=file]{display:none}
+.ocr-drop .btn{margin-top:8px;}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px){
+  .sidebar{display:none}
+  .app-shell{flex-direction:column}
+  .topbar{position:sticky;top:0;z-index:40}
+  .container-fluid{padding:18px}
+}
+/* ---------- Reset/Global ---------- */
+:root{
+  --primary: #0b5ed7;
+  --accent: linear-gradient(90deg,#06b6d4,#0b5ed7);
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --bg: #f4f8fb;
+}
+*{box-sizing:border-box}
+body{font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:#0f172a; margin:0;}
+
+/* ---------- Shell ---------- */
+.app-shell{min-height:100vh}
+
+/* ---------- Sidebar ---------- */
+.sidebar{
+  width:260px;
+  background: #05132a;
+  color: #dbeafe;
+  padding:18px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+.sidebar.collapsed { width:80px; }
+.brand{display:flex;align-items:center;gap:10px;padding:6px 8px}
+.brand-logo{width:36px;height:36px;border-radius:8px;object-fit:cover}
+.brand-text{font-weight:700;color:var(--bg);}
+.nav-link{
+  color:#cfe9ff;
+  padding:10px 12px;
+  border-radius:8px;
+  display:flex;align-items:center;
+  gap:10px;
+}
+.nav-link:hover{background:rgba(255,255,255,0.03);text-decoration:none}
+.sidebar-footer{margin-top:auto;color:#9fb6d8;font-size:13px;padding:8px 6px}
+
+/* ---------- Topbar ---------- */
+.topbar{
+  height:64px;
+  background:transparent;
+  border-bottom:1px solid rgba(15,23,42,0.04);
+  display:flex;align-items:center;justify-content:space-between;
+}
+
+/* ---------- Content & Cards ---------- */
+.content{min-height:100vh}
+.card{background:var(--card-bg);border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 6px 18px rgba(8,24,48,0.04)}
+.chart-card{padding:18px}
+
+/* ---------- Form Controls ---------- */
+.btn-primary{
+  background: var(--primary) !important;
+  border: none;
+  box-shadow: 0 6px 18px rgba(11,94,215,0.14);
+}
+.btn-ghost{background:transparent;border:1px solid rgba(11,94,215,0.12);color:var(--primary);}
+
+/* ---------- Summary stat boxes ---------- */
+.stat-box{flex:1;min-width:160px;padding:14px;border-radius:10px;background:#fbfdff;border:1px solid rgba(11,94,215,0.03);text-align:center}
+.stat-box h3{margin:0;font-size:22px}
+.stat-box p{margin:4px 0 0;color:var(--muted)}
+.stat-box.low{border-left:6px solid #10b981}
+.stat-box.moderate{border-left:6px solid #f59e0b}
+.stat-box.high{border-left:6px solid #ef4444}
+
+/* ---------- Table ---------- */
+table{width:100%;border-collapse:collapse}
+thead th{background:var(--primary);color:#fff;padding:12px;font-weight:700;position:sticky;top:0}
+tbody td{padding:12px;border-bottom:1px solid rgba(2,6,23,0.04);text-align:center}
+tbody tr:hover{background:#fbfdff}
+.high-row{background:#fff1f2}
+.low-risk{background:#d1fae5;color:#065f46;padding:6px 10px;border-radius:12px}
+.moderate-risk{background:#fef3c7;color:#92400e;padding:6px 10px;border-radius:12px}
+.high-risk{background:#fee2e2;color:#991b1b;padding:6px 10px;border-radius:12px}
+
+/* ---------- OCR drop area ---------- */
+.ocr-drop{
+  border:2px dashed rgba(11,94,215,0.12);
+  border-radius:10px;padding:18px;text-align:center;background:linear-gradient(180deg, rgba(11,94,215,0.02), transparent)
+}
+.ocr-drop input[type=file]{display:none}
+.ocr-drop .btn{margin-top:8px;}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px){
+  .sidebar{display:none}
+  .app-shell{flex-direction:column}
+  .topbar{position:sticky;top:0;z-index:40}
+  .container-fluid{padding:18px}
+}
