@@ -79,14 +79,14 @@ http://127.0.0.1:5000
 ### 🏠 Home Page
 Clean and user-friendly landing page introducing the Heart-Link platform, allowing users to register or log in easily.
 
-![Home Page](screenshots/Home.png)
+![Home Page](screenshots/HomePage.png)
 
 ---
 
 ### 🧪 Diagnostic Dashboard
 Users can either upload a medical report for OCR-based analysis or manually enter clinical parameters to get an AI-powered diagnosis.
 
-![Diagnostic Dashboard](screenshots/Diagnostic_dashboard.png)
+![Diagnostic Dashboard](screenshots/Diagnostic_Dashboard.png)
 
 ---
 
@@ -96,3 +96,4 @@ Displays past predictions with risk categorization, probability scores, and opti
 ![User Dashboard](screenshots/Dashboard.png)
 
 ---
+
