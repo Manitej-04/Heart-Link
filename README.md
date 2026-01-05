@@ -54,22 +54,22 @@ Heart-Link is a full-stack web application designed to assist in the **early det
 ## ⚙️ Installation & Setup
 
 1️⃣ Clone the Repository
-git clone https://github.com/Manitej-04/Heart-Link.git
-cd Heart-Link
+- git clone https://github.com/Manitej-04/Heart-Link.git
+- cd Heart-Link
 
 2️⃣ Create Virtual Environment (Optional but Recommended)
-python -m venv .venv
-source .venv/bin/activate   # Linux/Mac
-.venv\Scripts\activate      # Windows
+- python -m venv .venv
+- source .venv/bin/activate   # Linux/Mac
+- .venv\Scripts\activate      # Windows
 
 3️⃣ Install Dependencies
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 4️⃣ Run the Application
-python app.py
+- python app.py
 
 ➠ Output
-Open your browser and navigate to:
+- Open your browser and navigate to:
 http://127.0.0.1:5000
 
 ---
@@ -96,5 +96,6 @@ Displays past predictions with risk categorization, probability scores, and opti
 ![User Dashboard](screenshots/Dashboard.png)
 
 ---
+
 
 
